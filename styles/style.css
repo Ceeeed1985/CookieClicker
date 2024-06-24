@@ -2,24 +2,105 @@ body{
     
     font-family: "Permanent Market", cursive;
     background-color:blanchedalmond;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-body a{
     text-decoration: none;
 }
 
-#container-general{
-    width: 80%;
-    margin: 0;
+/*///////////////////////// HEADER ////////////////////////*/
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 3em;
+    font-family: "Permanent Market", cursive;
+    color: #264653;
+    font-weight: normal;
+}
+
+.titre-custom{
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+
+/*////////////////////// CONTAINER-GENERAL /////////////////////*/
+
+.container-general{
+    width: 1024px;
+    padding: 1em;
     border: 0px solid white;
     background-color: white;
-    border: 0px white solid;
     border-radius: 15px;
+    display: flex;
+}
+
+.bienvenue{
+    width: 60%;
+    font-size: 1.2em;
+    border: 3px solid #264653;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-infos {
+    width: 40%;
+}
+
+.container-score{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.titre_score{
+    font-size: 1.5em;
+    text-align: end;
+}
+
+.score{
+    background-color: #264653;
+    color:white;
+    min-width: 40%;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 3em;
+    padding: 0 25px;
+    text-align: end;
+    margin: 10px;
+    border: 0px solid white;
+    border-radius: 5px;
+}
+
+.container-multiplicateur{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.titre_multiplicateur{
+    font-size: 1.5em;
+    text-align: end;
+}
+
+.multiplicateur{
+    background-color: #264653;
+    color:white;
+    min-width: 40%;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 3em;
+    padding: 0 25px;
+    text-align: end;
+    margin: 10px;
+    border: 0px solid white;
+    border-radius: 5px;
 }
 
 
@@ -32,83 +113,15 @@ body a{
     
 }
 
-h1{
-    font-size: 60px;
-    width: 60%;
-    font-family: "Permanent Market", cursive;
-    color: #264653;
-    font-weight: normal;
-    display: flex;
-    flex-direction: row;
-}
-.titre-custom{
-    color: #2a9d8f;
-    font-weight: bold;
-}
-.titre-custom:hover{
-    color: #e76f51;
-    font-weight: bold;
-}
 
-.titre_score{
-    font-size: 36px;
-    padding : 10px;
-    width: 20%;
-    text-align: end;
-}
-.score{
-    background-color: #264653;
-    color:white;
-    min-width: 150px;
-    align-items: flex-end;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 60px;
-    padding: 10px 25px;
-    text-align: end;
-    margin: 10px;
-    border: 0px solid white;
-    border-radius: 5px;
-    
-}
+
+
+
+
 
 /* DEUXIME PARTIE  */
 
-#multiplier-container  {
-    margin: auto;
-    display: flex;
-    justify-content:end;
-    background-color: white;
-}
 
-.bienvenue{
-    width: 60%;
-    text-align: center;
-    font-size: 24px;
-    border: 3px solid #264653;
-    border-radius: 15px;
-}
-.titre_multiplicateur{
-    font-size: 36px;
-    padding : 10px;
-    width: 20%;
-    text-align: end;
-
-}
-
-.multiplicateur{
-    background-color: #264653;
-    color:white;
-    min-width: 150px;
-    align-items: flex-end;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 48px;
-    padding: 10px 25px;
-    text-align: end;
-    margin : 10px;
-    border: 0px solid white;
-    border-radius: 5px;
-
-}
 
 /* TROISIEME PARTIE  */
 
@@ -256,9 +269,49 @@ button p{
 
 
 @media (max-width: 480px) {
-.titre{
-    width: 100%;
+
+h1{
+    margin : 0.5em;
+    font-size: 2em;
+}
+.container-general{
+    width: 90%;
+    flex-direction: column-reverse;
 }
 
+.bienvenue{
+    width: 100%;
+    font-size: 1em;;
+}
+
+.container-infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.container-score{
+    flex-direction: column;
+}
+
+.titre_score{
+    font-size: 1em;
+}
+
+.score{
+    font-size: 1.5em;
+}
+
+.container-multiplicateur{
+    flex-direction: column;
+}
+
+.titre_multiplicateur{
+    font-size: 1em;
+}
+
+.multiplicateur{
+    font-size: 1.5em;
+}
 
 }
