@@ -12,15 +12,10 @@ let totalMultiplicateur = 1;
 let totalMultiplicateurHtml = document.getElementById("multiplicateurText");
 let cookieClick = document.getElementById("cookie");
 
-let bonus1 = document.getElementById("bonus1"); //OK
-let bonus2 = document.getElementById("bonus2"); //OK
-let bonus3 = document.getElementById("bonus3"); //OK
-let bonus4 = document.getElementById("bonus4"); //OK
-
-let bonus1Multiplicator = 2;
-let bonus2Multiplicator = 3;
-let bonus3Multiplicator = 4;
-let bonus4Multiplicator = 5;
+let bonus1 = document.getElementById("bonus1");
+let bonus2 = document.getElementById("bonus2");
+let bonus3 = document.getElementById("bonus3");
+let bonus4 = document.getElementById("bonus4");
 
 let bonus1CostElement = document.getElementById("valeurCoutBonus1");
 let bonus1Cost = 10;
@@ -42,13 +37,6 @@ let bonus4Cost = 10000;
 let bonus4Increment = 5000;
 bonus4CostElement.innerHTML = bonus4Cost;
 
-
-
-let bonus1Number = 0;
-let bonus2Number = 0;
-let bonus3Number = 0;
-let bonus4Number = 0;
-
 let autoClickNumber = 0;
 
 
@@ -69,10 +57,6 @@ function autoClicker() {
   totalScoreHtml.innerHTML = totalScore;
 }
 //window.setInterval(auto, 1000);
-
-function applyFunction(){
-  console.log ("une seconde de moins");
-}
 
 // MISE A JOUR DE L AFFICHAGE DU TIMER
 
@@ -98,6 +82,16 @@ function genererNombreAleatoire (){
   return Math.floor(Math.random() * 200) + 1;
 }
 
+//GENERER UNE PHRASE ALEATOIRE
+
+function genererPhraseAleatoire (){
+    const phraseIndex = Math.floor(Math.random() * encouragements.length);
+    return encouragements[phraseIndex];
+  }
+  
+  console.log(genererPhraseAleatoire());
+
+
 
 //AJOUTER UN COMPTE A REBOURS
 
@@ -111,7 +105,6 @@ function startCoundownBonus3(){
   interval = setInterval(function() {
     countdown--;
     updateTimerBonus3Display(countdown);
-    applyFunction();
     if (countdown <=0 ) {
       clearInterval(interval);
       totalMultiplicateur = totalMultiplicateur / 2;
@@ -132,7 +125,6 @@ function startCoundownBonus4(){
   interval = setInterval(function() {
     countdown--;
     updateTimerBonus4Display(countdown);
-    applyFunction();
     if (countdown <=0 ) {
       clearInterval(interval);
       
@@ -145,6 +137,7 @@ function startCoundownBonus4(){
 
 
 cookieClick.addEventListener("click", clickScore);
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -205,3 +198,4 @@ bonus4.addEventListener("click", () => {
   bonus4Increment +=500;
 
 })
+
