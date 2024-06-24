@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cookie cliker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+
+    <header class="titre">
+      <h1>Cookie-<span class="titre-custom">Clicker</span></h1>
+    </header>
+
+    <section id="container-general">
+      <section id="game-container" class="container">
+        <article class="titre_score">Score :</article>
+        <article id="score" class="score">0000000</article>
+      </section>
+
+      <section id="multiplier-container" class="container">
+        <article class="bienvenue">
+          <p>Prêt à cliquer ? Cookie n'attend que ça !</p>
+        </article>
+        <article class="titre_multiplicateur">Multiplier :</article>
+        <article id="multiplicateurText" class="multiplicateur">1</article>
+      </section>
+
+      <section id="cookie-container" class="container">
+        <section class="colonne_display">
+          <img
+            src="/pictures/cookie_image.png"
+            alt="photo_de_cookie"
+            id="cookie"
+          />
+          <section id="bonus"></section>
+        </section>
+
+        <section class="commandes">
+          <button id="bonus1" class="bouton_commande" disabled>
+            <h3>Multiplier x <span id="valeurMultiplicateur">2</span></h3>
+            <h4 id="coutBonus1">cout : <span id="valeurCoutBonus1"></span></h4>
+          </button>
+          <button id="bonus2" class="bouton_commande" disabled>
+            <h3>Autoclick<span id="valeurMultiplicateurBonus2"></span></h3>
+            <h4 id="coutBonus2">cout : <span id="valeurCoutBonus2"> 1000</span></h4>
+          </button>
+          <button id="bonus3" class="bouton_commande" disabled>
+            <h3>Multiplier x 2 / 15 sec </h3>
+            <p id="timerBonus3">00:00:00</p>
+            <h4 id="coutBonus3">cout : <span id="valeurCoutBonus3"> 10000</span></h4>
+          </button>
+          <button id="bonus4" class="bouton_commande" disabled>
+            <h3>Click = entre 1 et 500 / 15 sec<span id="valeurMultiplier"></span></h3>
+            <p id="timerBonus4">00:00:00</p>
+            <h4 id="coutBonus4">cout : <span id="valeurCoutBonus4"> 100000</span></h4>
+          </button>
+        </section>
+      </section>
+    </section>
+
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
+</html>
