@@ -35,20 +35,23 @@ h1{
 .container-general{
     width: 1024px;
     padding: 1em;
-    border: 0px solid white;
+    border: 0.2em solid #264653;
     background-color: white;
     border-radius: 15px;
     display: flex;
+    margin-bottom: 1em;
 }
 
 .bienvenue{
     width: 60%;
     font-size: 1.2em;
+    background-color: #2a9d8f;
     border: 3px solid #264653;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .container-infos {
@@ -103,33 +106,32 @@ h1{
     border-radius: 5px;
 }
 
+/*//////////////////////// CONTAINER-JEU ///////////////////////*/
 
-/* PREMIERE PARTIE  */
-
-#game-container {
-    margin: auto;
+.container-jeu{
+    width: 1024px;
+    padding: 1em;
+    border: 0.2em solid #264653;
+    background-color: white;
+    border-radius: 15px;
     display: flex;
-    justify-content: space-between;
-    
 }
 
 
-
-
-
-
-
-/* DEUXIME PARTIE  */
-
-
-
-/* TROISIEME PARTIE  */
-
-#cookie-container{
-    margin: auto;
+.cookie-container{
+    width: 60%;
+    font-size: 1.2em;
+    background-color: #264653;
+    border-radius: 15px;
     display: flex;
-    justify-content:end;
-    background-color: white;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+img{
+    width: 60%;
+    animation:rotation 12s infinite linear;
 }
 
 .colonne_display{
@@ -146,10 +148,7 @@ h1{
 
 }
 
-img{
-    width: 40%;
-    animation:rotation 12s infinite linear;
-}
+
 
 img:hover {
     animation-play-state: paused;
