@@ -2,139 +2,134 @@ body{
     
     font-family: "Permanent Market", cursive;
     background-color:blanchedalmond;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-body a{
     text-decoration: none;
 }
 
-#container-general{
-    width: 80%;
-    margin: 0;
-    border: 0px solid white;
-    background-color: white;
-    border: 0px white solid;
-    border-radius: 15px;
-}
+/*///////////////////////// HEADER ////////////////////////*/
 
-
-/* PREMIERE PARTIE  */
-
-#game-container {
-    margin: auto;
+header{
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: center;
 }
 
 h1{
-    font-size: 60px;
-    width: 60%;
+    font-size: 3em;
     font-family: "Permanent Market", cursive;
     color: #264653;
     font-weight: normal;
-    display: flex;
-    flex-direction: row;
 }
+
 .titre-custom{
     color: #2a9d8f;
     font-weight: bold;
 }
-.titre-custom:hover{
-    color: #e76f51;
-    font-weight: bold;
-}
 
-.titre_score{
-    font-size: 36px;
-    padding : 10px;
-    width: 20%;
-    text-align: end;
-}
-.score{
-    background-color: #264653;
-    color:white;
-    min-width: 150px;
-    align-items: flex-end;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 60px;
-    padding: 10px 25px;
-    text-align: end;
-    margin: 10px;
-    border: 0px solid white;
-    border-radius: 5px;
-    
-}
 
-/* DEUXIME PARTIE  */
+/*////////////////////// CONTAINER-GENERAL /////////////////////*/
 
-#multiplier-container  {
-    margin: auto;
-    display: flex;
-    justify-content:end;
+.container-general{
+    width: 1024px;
+    padding: 1em;
+    border: 0.2em solid #264653;
     background-color: white;
+    border-radius: 15px;
+    display: flex;
+    margin-bottom: 1em;
 }
 
 .bienvenue{
     width: 60%;
-    text-align: center;
-    font-size: 24px;
+    font-size: 1.2em;
+    background-color: #2a9d8f;
     border: 3px solid #264653;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
-.titre_multiplicateur{
-    font-size: 36px;
-    padding : 10px;
-    width: 20%;
-    text-align: end;
 
+.container-infos {
+    width: 40%;
+}
+
+.container-score{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.titre_score{
+    font-size: 1.5em;
+    text-align: end;
+}
+
+.score{
+    background-color: #264653;
+    color:white;
+    min-width: 40%;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 3em;
+    padding: 0 25px;
+    text-align: end;
+    margin: 10px;
+    border: 0px solid white;
+    border-radius: 5px;
+}
+
+.container-multiplicateur{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.titre_multiplicateur{
+    font-size: 1.5em;
+    text-align: end;
 }
 
 .multiplicateur{
     background-color: #264653;
     color:white;
-    min-width: 150px;
-    align-items: flex-end;
+    min-width: 40%;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 48px;
-    padding: 10px 25px;
+    font-size: 3em;
+    padding: 0 25px;
     text-align: end;
-    margin : 10px;
+    margin: 10px;
     border: 0px solid white;
     border-radius: 5px;
-
 }
 
-/* TROISIEME PARTIE  */
+/*//////////////////////// CONTAINER-JEU ///////////////////////*/
 
-#cookie-container{
-    margin: auto;
-    display: flex;
-    justify-content:end;
+.container-jeu{
+    width: 1024px;
+    padding: 1em;
+    border: 0.2em solid #264653;
     background-color: white;
+    border-radius: 15px;
+    display: flex;
 }
 
-.colonne_display{
+
+.cookie-container{
+    width: 60%;
     background-color: #264653;
-    height: 500px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    margin: 25px;
-    border: 0px white solid;
-    border-radius: 15px;
     box-shadow: 2px 2px 10px 1px black;
-
 }
 
 img{
-    width: 40%;
+    width: 60%;
     animation:rotation 12s infinite linear;
 }
 
@@ -153,21 +148,13 @@ img:hover {
 
 
 
-.commandes{
+.container-commandes{
     width: 40%;
     display: flex;
     flex-direction: column;
-    gap : 10px;
-    align-items: center;
+    gap : 0.8em;
+    align-items: end;
     justify-content: center;
-}
-
-.display_info{
-    background-color: white;
-    padding: 10px;
-    margin-left : 10px;
-    margin-right: 10px;
-    height: 100px;
 }
 
 .bouton_commande{
@@ -175,7 +162,7 @@ img:hover {
     color: white;
     border: 4px #2a9d8f solid;
     font-size: 1.5em;
-    width: 75%;
+    width: 90%;
     height: 80px;
     font-family: "Permanent Market", cursive;
     overflow: hidden;
@@ -199,9 +186,7 @@ img:hover {
 .bouton_commande:hover::before{
     top: 0;
     border-radius: 0;
-
 }
-
 
 .bouton_commande:disabled{
     background-color: #e5e5dc;
@@ -209,7 +194,7 @@ img:hover {
     border: 0px white solid;
     font-size: 1.5em;
     height: 80px;
-    width: 75%;
+    width: 90%;
     font-family: "Permanent Market", cursive;
 }
 
@@ -221,7 +206,7 @@ img:hover {
 
 button h3{
     margin: 0;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 button h4{
@@ -244,21 +229,100 @@ button p{
     display: none;
     color: #e76f51;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.8em;
+    padding-bottom: 0.5em;
 }
 
 #timerBonus4 {
     display: none;
     color: #e76f51;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.8em;
+    padding-bottom: 0.5em;
 }
 
 
 @media (max-width: 480px) {
-.titre{
-    width: 100%;
+
+h1{
+    margin : 0.5em;
+    font-size: 2em;
+}
+.container-general{
+    width: 90%;
+    flex-direction: column-reverse;
 }
 
+.bienvenue{
+    width: 100%;
+    font-size: 1em;;
+}
+
+.container-infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.container-score{
+    flex-direction: column;
+}
+
+.titre_score{
+    font-size: 1em;
+}
+
+.score{
+    font-size: 1.5em;
+}
+
+.container-multiplicateur{
+    flex-direction: column;
+}
+
+.titre_multiplicateur{
+    font-size: 1em;
+}
+
+.multiplicateur{
+    font-size: 1.5em;
+}
+
+.container-jeu{
+    width:90%;
+    flex-direction: column;
+}
+
+.cookie-container{
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+img{
+    width: 50%;
+}
+
+.container-commandes{
+    width: 100%;
+    gap : 0.6em;
+}
+
+.bouton_commande{
+    width: 100%;
+    height: 60px;
+    font-size: 1.2em;
+}
+
+.bouton_commande::before {
+    width: 100%;
+    height: 60px;
+    font-size: 1.2em;
+}
+
+.bouton_commande:disabled{
+    width: 100%;
+    height: 60px;
+    font-size: 1.2em;
+}
 
 }
